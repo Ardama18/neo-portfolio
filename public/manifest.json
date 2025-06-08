@@ -1,0 +1,33 @@
+{
+  "name": "Alex Chen - Full-Stack Engineer Portfolio",
+  "short_name": "Alex Chen",
+  "description": "Portfolio website of Alex Chen, a passionate full-stack engineer specializing in innovative web applications and AI-powered solutions",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#22d3ee",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "categories": [
+    "developer",
+    "portfolio",
+    "technology"
+  ],
+  "lang": "en-US",
+  "dir": "ltr",
+  "scope": "/",
+  "prefer_related_applications": false
+}
