@@ -27,7 +27,7 @@ export default function SkillCard({ skill, index, isHovered, onHover, onLeave }:
   
   return (
     <motion.div
-      className="relative group cursor-pointer"
+      className="relative group cursor-pointer transform-gpu"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ 
@@ -43,7 +43,6 @@ export default function SkillCard({ skill, index, isHovered, onHover, onLeave }:
         rotateY: 10,
         z: 50
       }}
-      style={{ transformStyle: "preserve-3d" }}
     >
       {/* Card container */}
       <div className={cn(
