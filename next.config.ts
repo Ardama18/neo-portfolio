@@ -10,7 +10,7 @@ const nextConfig: NextConfig = {
   output: 'export',
   trailingSlash: true,
   basePath: '/neo-portfolio',
-  assetPrefix: '/neo-portfolio/',
+  assetPrefix: '/neo-portfolio',
 
   // Optimize images
   images: {
