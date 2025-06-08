@@ -9,6 +9,8 @@ const nextConfig: NextConfig = {
   // Enable static export for GitHub Pages
   output: 'export',
   trailingSlash: true,
+  basePath: '/neo-portfolio',
+  assetPrefix: '/neo-portfolio/',
 
   // Optimize images
   images: {
