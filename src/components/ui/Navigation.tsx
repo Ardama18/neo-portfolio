@@ -68,7 +68,7 @@ export default function Navigation() {
               className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent"
               whileHover={{ scale: 1.05 }}
             >
-              AC
+              AR
             </motion.div>
 
             {/* Desktop Menu */}

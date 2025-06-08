@@ -18,7 +18,7 @@ const predefinedQuestions = [
 ]
 
 const responses: Record<string, string> = {
-  "tell me about yourself": "Hi! I'm Alex Chen, a passionate full-stack engineer with 5+ years of experience building innovative web applications and AI-powered solutions. I love exploring the intersection of technology and human experience, constantly pushing the boundaries of what's possible with modern web technologies.",
+  "tell me about yourself": "Hi! I'm Ardama, a passionate full-stack engineer with 5+ years of experience building innovative web applications and AI-powered solutions. I love exploring the intersection of technology and human experience, constantly pushing the boundaries of what's possible with modern web technologies.",
   
   "what's your background": "I have a strong background in computer science and have been professionally developing software for over 5 years. I've worked at both startups and larger tech companies, giving me experience with different scales and types of projects. I'm passionate about both frontend and backend development, with a particular interest in AI and machine learning applications.",
   
@@ -39,7 +39,7 @@ export default function ChatBot() {
   const [messages, setMessages] = useState<ChatMessage[]>([
     {
       id: '1',
-      content: "Hello! I'm Alex's AI assistant. I can tell you about his background, skills, and experience. What would you like to know?",
+      content: "Hello! I'm Ardama's AI assistant. I can tell you about his background, skills, and experience. What would you like to know?",
       isUser: false,
       timestamp: new Date()
     }
@@ -85,7 +85,7 @@ export default function ChatBot() {
       }
     })
     
-    return bestMatch || "That's an interesting question! I'd love to discuss that further with you. Feel free to ask about Alex's background, skills, projects, or experience - I have lots of insights to share!"
+    return bestMatch || "That's an interesting question! I'd love to discuss that further with you. Feel free to ask about Ardama's background, skills, projects, or experience - I have lots of insights to share!"
   }
 
   const handleSendMessage = async (message?: string) => {
@@ -158,8 +158,8 @@ export default function ChatBot() {
         </motion.div>
         
         <div>
-          <h3 className="text-lg font-semibold text-white">Alex AI Assistant</h3>
-          <p className="text-sm text-gray-400">Ask me anything about Alex&apos;s background and experience</p>
+          <h3 className="text-lg font-semibold text-white">Ardama AI Assistant</h3>
+          <p className="text-sm text-gray-400">Ask me anything about Ardama&apos;s background and experience</p>
         </div>
         
         <motion.div
@@ -288,7 +288,7 @@ export default function ChatBot() {
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
           onKeyPress={handleKeyPress}
-          placeholder="Ask me anything about Alex..."
+          placeholder="Ask me anything about Ardama..."
           className="flex-1 bg-white/10 border border-white/20 rounded-full px-4 py-2 text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400/50 focus:bg-white/20 transition-all"
           disabled={isTyping}
         />
