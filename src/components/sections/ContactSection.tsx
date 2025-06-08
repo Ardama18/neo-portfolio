@@ -18,14 +18,14 @@ const contactMethods = [
   {
     icon: Github,
     label: 'GitHub',
-    value: '@alexchen',
+    value: '@Ardama18',
     href: personalInfo.github,
     color: 'from-gray-600 to-gray-800'
   },
   {
     icon: Linkedin,
     label: 'LinkedIn',
-    value: '/in/alexchen',
+    value: '/in/ardama',
     href: personalInfo.linkedin,
     color: 'from-blue-600 to-blue-800'
   },
