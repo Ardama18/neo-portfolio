@@ -105,11 +105,11 @@ export const experiences: Experience[] = [
 ]
 
 export const personalInfo = {
-  name: 'Alex Chen',
+  name: 'Ardama',
   title: 'Full-Stack Engineer & AI Enthusiast',
   location: 'San Francisco, CA',
-  email: 'alex@example.com',
-  github: 'https://github.com/alexchen',
-  linkedin: 'https://linkedin.com/in/alexchen',
+  email: 'ardama@example.com',
+  github: 'https://github.com/Ardama18',
+  linkedin: 'https://linkedin.com/in/ardama',
   bio: 'Passionate software engineer with expertise in building cutting-edge web applications and AI-powered solutions. I love exploring the intersection of technology and human experience.'
 }

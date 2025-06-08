@@ -18,8 +18,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Alex Chen - Full-Stack Engineer & AI Enthusiast",
-    template: "%s | Alex Chen - Portfolio"
+    default: "Ardama - Full-Stack Engineer & AI Enthusiast",
+    template: "%s | Ardama - Portfolio"
   },
   description: "Passionate full-stack engineer with expertise in building cutting-edge web applications and AI-powered solutions. Explore my portfolio showcasing innovative projects in React, Next.js, Python, and machine learning.",
   keywords: [
@@ -35,35 +35,35 @@ export const metadata: Metadata = {
     "Software Engineer",
     "San Francisco Developer"
   ],
-  authors: [{ name: "Alex Chen", url: "https://alexchen.dev" }],
-  creator: "Alex Chen",
-  publisher: "Alex Chen",
-  metadataBase: new URL('https://alexchen.dev'),
+  authors: [{ name: "Ardama", url: "https://ardama18.github.io/neo-portfolio" }],
+  creator: "Ardama",
+  publisher: "Ardama",
+  metadataBase: new URL('https://ardama18.github.io/neo-portfolio'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://alexchen.dev',
-    siteName: 'Alex Chen Portfolio',
-    title: 'Alex Chen - Full-Stack Engineer & AI Enthusiast',
+    url: 'https://ardama18.github.io/neo-portfolio',
+    siteName: 'Ardama Portfolio',
+    title: 'Ardama - Full-Stack Engineer & AI Enthusiast',
     description: 'Passionate full-stack engineer specializing in innovative web applications and AI-powered solutions. View my latest projects and get in touch.',
     images: [
       {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Alex Chen - Full-Stack Engineer Portfolio',
+        alt: 'Ardama - Full-Stack Engineer Portfolio',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Alex Chen - Full-Stack Engineer & AI Enthusiast',
+    title: 'Ardama - Full-Stack Engineer & AI Enthusiast',
     description: 'Passionate full-stack engineer specializing in innovative web applications and AI-powered solutions.',
     images: ['/og-image.jpg'],
-    creator: '@alexchen_dev',
+    creator: '@ardama_dev',
   },
   robots: {
     index: true,
@@ -121,14 +121,14 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Person",
-              "name": "Alex Chen",
+              "name": "Ardama",
               "jobTitle": "Full-Stack Engineer",
               "description": "Passionate full-stack engineer with expertise in building cutting-edge web applications and AI-powered solutions.",
-              "url": "https://alexchen.dev",
+              "url": "https://ardama18.github.io/neo-portfolio",
               "sameAs": [
-                "https://github.com/alexchen",
-                "https://linkedin.com/in/alexchen",
-                "https://twitter.com/alexchen_dev"
+                "https://github.com/Ardama18",
+                "https://linkedin.com/in/ardama",
+                "https://twitter.com/ardama_dev"
               ],
               "knowsAbout": [
                 "React",
