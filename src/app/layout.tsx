@@ -18,52 +18,53 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Ardama - Full-Stack Engineer & AI Enthusiast",
-    template: "%s | Ardama - Portfolio"
+    default: "Naoki Kodama - AI推進 / Full-Stack Engineer",
+    template: "%s | Naoki Kodama"
   },
-  description: "Passionate full-stack engineer with expertise in building cutting-edge web applications and AI-powered solutions. Explore my portfolio showcasing innovative projects in React, Next.js, Python, and machine learning.",
+  description: "Naoki Kodamaのポートフォリオ。AI駆動開発の全社展開、新規SaaS開発、決済バックエンド、組込み制御、組織マネジメントの経験を紹介します。",
   keywords: [
-    "Full-Stack Developer",
-    "React Developer",
+    "Naoki Kodama",
+    "児玉直樹",
+    "AI駆動開発",
+    "Full-Stack Engineer",
     "Next.js",
     "TypeScript",
+    "NestJS",
+    "C#",
+    ".NET",
+    "C++",
     "Python",
-    "AI Developer",
-    "Machine Learning",
-    "Web Development",
-    "Portfolio",
-    "Software Engineer",
-    "San Francisco Developer"
+    "Dify",
+    "Software Engineer"
   ],
-  authors: [{ name: "Ardama", url: "https://ardama18.github.io/neo-portfolio" }],
-  creator: "Ardama",
-  publisher: "Ardama",
+  authors: [{ name: "Naoki Kodama", url: "https://ardama18.github.io/neo-portfolio" }],
+  creator: "Naoki Kodama",
+  publisher: "Naoki Kodama",
   metadataBase: new URL('https://ardama18.github.io/neo-portfolio'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
     type: 'website',
-    locale: 'en_US',
+    locale: 'ja_JP',
     url: 'https://ardama18.github.io/neo-portfolio',
-    siteName: 'Ardama Portfolio',
-    title: 'Ardama - Full-Stack Engineer & AI Enthusiast',
-    description: 'Passionate full-stack engineer specializing in innovative web applications and AI-powered solutions. View my latest projects and get in touch.',
+    siteName: 'Naoki Kodama Portfolio',
+    title: 'Naoki Kodama - AI推進 / Full-Stack Engineer',
+    description: 'AI駆動開発、新規SaaS開発、決済バックエンド、組込み制御、組織マネジメントの経験をまとめたポートフォリオです。',
     images: [
       {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Ardama - Full-Stack Engineer Portfolio',
+        alt: 'Naoki Kodama Portfolio',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Ardama - Full-Stack Engineer & AI Enthusiast',
-    description: 'Passionate full-stack engineer specializing in innovative web applications and AI-powered solutions.',
+    title: 'Naoki Kodama - AI推進 / Full-Stack Engineer',
+    description: 'AI駆動開発、新規SaaS開発、決済バックエンド、組込み制御の経験をまとめたポートフォリオです。',
     images: ['/og-image.jpg'],
-    creator: '@ardama_dev',
   },
   robots: {
     index: true,
@@ -75,9 +76,6 @@ export const metadata: Metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
-  },
-  verification: {
-    google: 'your-google-verification-code',
   },
 };
 
@@ -97,17 +95,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="ja" className="scroll-smooth">
       <head>
         {/* Preconnect to external domains */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         
         {/* Favicon and app icons */}
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" href="/icon.svg" type="image/svg+xml" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <link rel="manifest" href="/manifest.json" />
+        <link rel="icon" href="/neo-portfolio/favicon.ico" sizes="any" />
+        <link rel="manifest" href="/neo-portfolio/manifest.json" />
         
         {/* Performance and security headers */}
         <meta httpEquiv="X-DNS-Prefetch-Control" content="on" />
@@ -121,29 +117,29 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Person",
-              "name": "Ardama",
-              "jobTitle": "Full-Stack Engineer",
-              "description": "Passionate full-stack engineer with expertise in building cutting-edge web applications and AI-powered solutions.",
+              "name": "Naoki Kodama",
+              "alternateName": "Ardama18",
+              "jobTitle": "AI推進 / Full-Stack Engineer",
+              "description": "AI駆動開発、新規SaaS開発、決済バックエンド、組込み制御、組織マネジメントを経験するソフトウェアエンジニア。",
               "url": "https://ardama18.github.io/neo-portfolio",
               "sameAs": [
-                "https://github.com/Ardama18",
-                "https://linkedin.com/in/ardama",
-                "https://twitter.com/ardama_dev"
+                "https://github.com/Ardama18"
               ],
               "knowsAbout": [
-                "React",
-                "Next.js",
+                "AI駆動開発",
                 "TypeScript",
+                "Next.js",
+                "NestJS",
+                "C#",
+                ".NET",
+                "C++",
                 "Python",
-                "Node.js",
-                "Machine Learning",
-                "Artificial Intelligence",
-                "Web Development"
+                "AWS",
+                "Dify"
               ],
-              "alumniOf": "University of Technology",
               "workLocation": {
                 "@type": "Place",
-                "name": "San Francisco, CA"
+                "name": "Japan"
               }
             })
           }}

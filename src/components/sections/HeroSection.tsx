@@ -5,6 +5,12 @@ import { personalInfo } from '@/data/portfolio'
 import { ChevronDown, Github, Linkedin, Mail } from 'lucide-react'
 
 export default function HeroSection() {
+  const socialLinks = [
+    { icon: Github, href: personalInfo.github, label: 'GitHub' },
+    { icon: Linkedin, href: personalInfo.linkedin, label: 'LinkedIn' },
+    { icon: Mail, href: personalInfo.email ? `mailto:${personalInfo.email}` : '', label: 'Email' }
+  ].filter((link) => link.href)
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -49,7 +55,7 @@ export default function HeroSection() {
       <motion.div
         className="relative z-20 text-center max-w-4xl mx-auto px-6"
         variants={containerVariants}
-        initial="hidden"
+        initial="visible"
         animate="visible"
       >
         {/* Glitch effect name */}
@@ -58,7 +64,7 @@ export default function HeroSection() {
           variants={glitchVariants}
         >
           <motion.h1 
-            className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent"
+            className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent"
             variants={itemVariants}
           >
             {personalInfo.name}
@@ -66,7 +72,7 @@ export default function HeroSection() {
           
           {/* Glitch layers */}
           <motion.h1 
-            className="absolute inset-0 text-6xl md:text-8xl font-bold text-red-500 opacity-20 mix-blend-multiply"
+            className="absolute inset-0 text-5xl md:text-7xl font-bold text-red-500 opacity-20 mix-blend-multiply"
             animate={{ 
               x: [0, -2, 2, 0],
               opacity: [0, 0.3, 0, 0.3, 0]
@@ -81,7 +87,7 @@ export default function HeroSection() {
           </motion.h1>
           
           <motion.h1 
-            className="absolute inset-0 text-6xl md:text-8xl font-bold text-blue-500 opacity-20 mix-blend-multiply"
+            className="absolute inset-0 text-5xl md:text-7xl font-bold text-blue-500 opacity-20 mix-blend-multiply"
             animate={{ 
               x: [0, 2, -2, 0],
               opacity: [0, 0.3, 0, 0.3, 0]
@@ -100,7 +106,7 @@ export default function HeroSection() {
         {/* Typing effect title */}
         <motion.div variants={itemVariants} className="mb-8">
           <motion.h2 
-            className="text-2xl md:text-4xl font-light text-gray-300"
+            className="text-xl md:text-3xl font-light text-gray-300"
             initial={{ width: 0 }}
             animate={{ width: "auto" }}
             transition={{ duration: 2, delay: 1 }}
@@ -134,11 +140,7 @@ export default function HeroSection() {
           className="flex justify-center space-x-8 mb-16"
           variants={itemVariants}
         >
-          {[
-            { icon: Github, href: personalInfo.github, label: 'GitHub' },
-            { icon: Linkedin, href: personalInfo.linkedin, label: 'LinkedIn' },
-            { icon: Mail, href: `mailto:${personalInfo.email}`, label: 'Email' }
-          ].map(({ icon: Icon, href, label }) => (
+          {socialLinks.map(({ icon: Icon, href, label }) => (
             <motion.a
               key={label}
               href={href}
@@ -169,7 +171,7 @@ export default function HeroSection() {
             className="text-white/60"
           >
             <ChevronDown className="w-8 h-8 mx-auto" />
-            <p className="text-sm mt-2">Scroll to explore</p>
+            <p className="text-sm mt-2">Scroll</p>
           </motion.div>
         </motion.div>
       </motion.div>

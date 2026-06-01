@@ -7,6 +7,8 @@ export interface Project {
   imageUrl: string
   demoUrl?: string
   githubUrl?: string
+  features?: string[]
+  technicalHighlights?: string[]
   featured: boolean
   category: 'web' | 'mobile' | 'api' | 'ml' | 'other'
   year: number

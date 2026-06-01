@@ -26,6 +26,12 @@ const statusColors = {
   concept: 'text-purple-400 bg-purple-400/20'
 }
 
+const statusLabels = {
+  completed: 'completed',
+  'in-progress': 'in progress',
+  concept: 'concept'
+}
+
 export default function ProjectCard({ project, index, onExpand }: ProjectCardProps) {
   const [isHovered, setIsHovered] = useState(false)
   const gradientClass = categoryColors[project.category] || categoryColors.other
@@ -69,7 +75,7 @@ export default function ProjectCard({ project, index, onExpand }: ProjectCardPro
             "px-3 py-1 rounded-full text-xs font-medium",
             statusColors[project.status]
           )}>
-            {project.status.replace('-', ' ')}
+            {statusLabels[project.status]}
           </span>
           
           <div className="flex space-x-2">
@@ -182,8 +188,8 @@ export default function ProjectCard({ project, index, onExpand }: ProjectCardPro
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
           >
-            <span className="text-sm text-gray-400">
-              Click to explore
+              <span className="text-sm text-gray-400">
+              View details
             </span>
             
             <motion.div
@@ -191,7 +197,7 @@ export default function ProjectCard({ project, index, onExpand }: ProjectCardPro
               animate={{ x: isHovered ? 5 : 0 }}
               transition={{ duration: 0.2 }}
             >
-              <span className="text-sm">Learn more</span>
+              <span className="text-sm">Open</span>
               <ArrowRight className="w-4 h-4" />
             </motion.div>
           </motion.div>

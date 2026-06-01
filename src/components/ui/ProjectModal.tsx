@@ -25,10 +25,28 @@ const statusColors = {
   concept: 'text-purple-400 bg-purple-400/20'
 }
 
+const statusLabels = {
+  completed: 'completed',
+  'in-progress': 'in progress',
+  concept: 'concept'
+}
+
 export default function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
   if (!project) return null
 
   const gradientClass = categoryColors[project.category] || categoryColors.other
+  const features = project.features ?? [
+    '実課題を解くための機能設計',
+    '継続的に改善しやすい構成',
+    '利用シーンを意識したUI/UX',
+    '実装と検証を短いサイクルで反復'
+  ]
+  const technicalHighlights = project.technicalHighlights ?? [
+    '型安全な実装',
+    '外部サービス/API連携',
+    '保守しやすいモジュール構成',
+    'テストと品質確認を前提にした開発'
+  ]
 
   return (
     <AnimatePresence>
@@ -111,7 +129,7 @@ export default function ProjectModal({ project, isOpen, onClose }: ProjectModalP
                     "px-4 py-2 rounded-full text-sm font-medium",
                     statusColors[project.status]
                   )}>
-                    {project.status.replace('-', ' ')}
+                    {statusLabels[project.status]}
                   </span>
                 </div>
               </div>
@@ -142,7 +160,7 @@ export default function ProjectModal({ project, isOpen, onClose }: ProjectModalP
                     whileTap={{ scale: 0.95 }}
                   >
                     <Github className="w-5 h-5" />
-                    <span>Source Code</span>
+                    <span>GitHub</span>
                   </motion.a>
                 )}
               </div>
@@ -176,7 +194,7 @@ export default function ProjectModal({ project, isOpen, onClose }: ProjectModalP
 
               {/* Long description */}
               <div className="mb-8">
-                <h3 className="text-2xl font-bold text-white mb-4">About This Project</h3>
+                <h3 className="text-2xl font-bold text-white mb-4">About</h3>
                 <p className="text-gray-300 leading-relaxed text-lg">
                   {project.longDescription}
                 </p>
@@ -184,7 +202,7 @@ export default function ProjectModal({ project, isOpen, onClose }: ProjectModalP
 
               {/* Technologies grid */}
               <div className="mb-8">
-                <h3 className="text-2xl font-bold text-white mb-4">Technologies Used</h3>
+                <h3 className="text-2xl font-bold text-white mb-4">Technologies</h3>
                 <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-3">
                   {project.technologies.map((tech, index) => (
                     <motion.div
@@ -206,20 +224,18 @@ export default function ProjectModal({ project, isOpen, onClose }: ProjectModalP
                 <div className="p-6 rounded-xl bg-gradient-to-br from-white/5 to-white/10 border border-white/10">
                   <h4 className="text-lg font-bold text-white mb-3">Key Features</h4>
                   <ul className="space-y-2 text-gray-300">
-                    <li>• Advanced AI-powered functionality</li>
-                    <li>• Real-time data processing</li>
-                    <li>• Responsive design</li>
-                    <li>• Scalable architecture</li>
+                    {features.map((feature) => (
+                      <li key={feature}>• {feature}</li>
+                    ))}
                   </ul>
                 </div>
                 
                 <div className="p-6 rounded-xl bg-gradient-to-br from-white/5 to-white/10 border border-white/10">
                   <h4 className="text-lg font-bold text-white mb-3">Technical Highlights</h4>
                   <ul className="space-y-2 text-gray-300">
-                    <li>• Performance optimization</li>
-                    <li>• Security best practices</li>
-                    <li>• Clean code architecture</li>
-                    <li>• Comprehensive testing</li>
+                    {technicalHighlights.map((highlight) => (
+                      <li key={highlight}>• {highlight}</li>
+                    ))}
                   </ul>
                 </div>
               </div>

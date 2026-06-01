@@ -48,14 +48,14 @@ export default function AboutSection() {
             className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent"
             variants={itemVariants}
           >
-            About Me
+            About
           </motion.h2>
           
           <motion.p 
             className="text-xl text-gray-300 max-w-3xl mx-auto"
             variants={itemVariants}
           >
-            Get to know me through an interactive AI-powered conversation
+            AI駆動開発を組織に実装しながら、自分でも設計と実装に入り続けるエンジニアです。
           </motion.p>
         </motion.div>
 
@@ -117,10 +117,10 @@ export default function AboutSection() {
               variants={containerVariants}
             >
               {[
-                { icon: Code, label: 'Years Coding', value: '5+', color: 'text-cyan-400' },
-                { icon: Coffee, label: 'Projects Built', value: '50+', color: 'text-purple-400' },
-                { icon: Heart, label: 'Happy Clients', value: '25+', color: 'text-pink-400' },
-                { icon: Star, label: 'GitHub Stars', value: '1.2k+', color: 'text-yellow-400' }
+                { icon: Code, label: 'Software Career', value: '25+ yrs', color: 'text-cyan-400' },
+                { icon: Coffee, label: 'Public Repos', value: '10', color: 'text-purple-400' },
+                { icon: Heart, label: 'Managed Org', value: '50+ ppl', color: 'text-pink-400' },
+                { icon: Star, label: 'Current Focus', value: 'AI Dev', color: 'text-yellow-400' }
               ].map((stat) => (
                 <motion.div
                   key={stat.label}
@@ -185,7 +185,7 @@ export default function AboutSection() {
                     </div>
                     
                     <ul className="space-y-2 text-gray-300 text-sm">
-                      {exp.description.slice(0, 2).map((desc, i) => (
+                      {exp.description.slice(0, 3).map((desc, i) => (
                         <li key={i}>• {desc}</li>
                       ))}
                     </ul>
@@ -227,40 +227,25 @@ export default function AboutSection() {
           transition={{ delay: 0.7 }}
         >
           <h3 className="text-2xl font-bold text-white text-center mb-8">
-            Fun Facts About Me
+            私について
           </h3>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
               {
-                emoji: "🚀",
-                fact: "Built my first website at age 12",
-                description: "Started with HTML and never looked back"
-              },
-              {
-                emoji: "🌙",
-                fact: "I'm a night owl developer",
-                description: "My best code happens after 10 PM"
-              },
-              {
                 emoji: "🎮",
-                fact: "Gaming inspires my UI designs",
-                description: "Good UX is like good game design"
+                fact: "初めて作ったゲームはMSX",
+                description: "小学校5年生のときに、MSXでゲーム制作を経験しました"
               },
               {
-                emoji: "📚",
-                fact: "Always learning something new",
-                description: "Currently exploring Web3 and blockchain"
+                emoji: "🧠",
+                fact: "AI活用を現場実装まで落とし込む",
+                description: "個人利用ではなく、開発プロセスと組織展開まで設計します"
               },
               {
-                emoji: "🎵",
-                fact: "Code better with music",
-                description: "Lo-fi hip hop is my coding soundtrack"
-              },
-              {
-                emoji: "🌱",
-                fact: "Love mentoring junior devs",
-                description: "Teaching helps me learn too"
+                emoji: "🛠️",
+                fact: "組込みからWebまで横断",
+                description: "C/C++、C#/.NET、TypeScript/Next.jsまで幅広く扱います"
               }
             ].map((item, itemIndex) => (
               <motion.div

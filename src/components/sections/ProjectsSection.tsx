@@ -9,8 +9,8 @@ import { Project } from '@/types'
 import { cn } from '@/lib/utils'
 
 const categories = [
-  { name: 'All Projects', value: 'all' },
-  { name: 'Web Apps', value: 'web' },
+  { name: 'All', value: 'all' },
+  { name: 'Web', value: 'web' },
   { name: 'Mobile', value: 'mobile' },
   { name: 'APIs', value: 'api' },
   { name: 'ML/AI', value: 'ml' },
@@ -18,9 +18,9 @@ const categories = [
 ]
 
 const sortOptions = [
-  { name: 'Featured First', value: 'featured' },
-  { name: 'Newest First', value: 'newest' },
-  { name: 'Oldest First', value: 'oldest' },
+  { name: 'Featured', value: 'featured' },
+  { name: 'Newest', value: 'newest' },
+  { name: 'Oldest', value: 'oldest' },
   { name: 'A-Z', value: 'alphabetical' }
 ]
 
@@ -105,14 +105,14 @@ export default function ProjectsSection() {
             className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent"
             variants={itemVariants}
           >
-            Featured Projects
+            Projects
           </motion.h2>
           
           <motion.p 
             className="text-xl text-gray-300 max-w-3xl mx-auto"
             variants={itemVariants}
           >
-            A showcase of my most innovative and impactful projects, featuring cutting-edge technologies and creative solutions
+            GitHubで公開しているAI活用、Webアプリ、クラウド検証、データ分析系のプロジェクトです。
           </motion.p>
         </motion.div>
 
@@ -173,7 +173,7 @@ export default function ProjectsSection() {
             { label: 'Total Projects', value: projects.length },
             { label: 'Featured', value: projects.filter(p => p.featured).length },
             { label: 'Completed', value: projects.filter(p => p.status === 'completed').length },
-            { label: 'Technologies', value: new Set(projects.flatMap(p => p.technologies)).size }
+            { label: 'Tech Stack', value: new Set(projects.flatMap(p => p.technologies)).size }
           ].map((stat, index) => (
             <motion.div
               key={stat.label}

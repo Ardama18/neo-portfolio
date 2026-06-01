@@ -1,33 +1,20 @@
 {
-  "name": "Ardama - Full-Stack Engineer Portfolio",
-  "short_name": "Ardama",
-  "description": "Portfolio website of Ardama, a passionate full-stack engineer specializing in innovative web applications and AI-powered solutions",
-  "start_url": "/",
+  "name": "Naoki Kodama Portfolio",
+  "short_name": "Naoki Kodama",
+  "description": "AI駆動開発、新規SaaS開発、決済バックエンド、組込み制御、組織マネジメントの経験をまとめたポートフォリオです。",
+  "start_url": "/neo-portfolio/",
   "display": "standalone",
   "background_color": "#000000",
   "theme_color": "#22d3ee",
   "orientation": "portrait-primary",
-  "icons": [
-    {
-      "src": "/icon-192.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "maskable"
-    },
-    {
-      "src": "/icon-512.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any"
-    }
-  ],
+  "icons": [],
   "categories": [
     "developer",
     "portfolio",
     "technology"
   ],
-  "lang": "en-US",
+  "lang": "ja-JP",
   "dir": "ltr",
-  "scope": "/",
+  "scope": "/neo-portfolio/",
   "prefer_related_applications": false
 }

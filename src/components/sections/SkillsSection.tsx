@@ -4,15 +4,23 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { skills } from '@/data/portfolio'
 import SkillCard from '@/components/ui/SkillCard'
+import { cn } from '@/lib/utils'
 
 const categories = [
   { name: 'All', value: 'all' },
   { name: 'Frontend', value: 'frontend' },
   { name: 'Backend', value: 'backend' },
+  { name: 'Mobile', value: 'mobile' },
   { name: 'DevOps', value: 'devops' },
-  { name: 'ML/AI', value: 'ml' },
-  { name: 'Design', value: 'design' },
+  { name: 'AI・開発支援', value: 'ml' },
   { name: 'Other', value: 'other' }
+]
+
+const overviewCategories = [
+  { name: 'Frontend', value: 'frontend' },
+  { name: 'Backend', value: 'backend' },
+  { name: 'DevOps', value: 'devops' },
+  { name: 'AI活用', value: 'ml' }
 ]
 
 export default function SkillsSection() {
@@ -80,14 +88,14 @@ export default function SkillsSection() {
             className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent"
             variants={itemVariants}
           >
-            Skills & Expertise
+            Skills
           </motion.h2>
           
           <motion.p 
             className="text-xl text-gray-300 max-w-3xl mx-auto"
             variants={itemVariants}
           >
-            A comprehensive overview of my technical skills and proficiency levels across various domains
+            AI駆動開発、Webプロダクト、決済バックエンド、組込み制御、組織マネジメントを横断するスキルセットです。
           </motion.p>
         </motion.div>
 
@@ -190,21 +198,19 @@ export default function SkillsSection() {
           transition={{ delay: 0.5 }}
         >
           <h3 className="text-2xl font-bold text-white mb-4">
-            Skill Proficiency Overview
+            スキル概要
           </h3>
           
           <div className="flex flex-wrap justify-center gap-4">
-            {['Frontend', 'Backend', 'DevOps', 'ML/AI'].map((category, index) => {
-              const categorySkills = skills.filter(skill => 
-                skill.category === category.toLowerCase().replace('/', '').replace('ml/ai', 'ml')
-              )
+            {overviewCategories.map((category, index) => {
+              const categorySkills = skills.filter(skill => skill.category === category.value)
               const averageLevel = categorySkills.length > 0 
                 ? categorySkills.reduce((sum, skill) => sum + skill.level, 0) / categorySkills.length 
                 : 0
 
               return (
                 <motion.div
-                  key={category}
+                  key={category.value}
                   className="relative"
                   initial={{ scale: 0 }}
                   whileInView={{ scale: 1 }}
@@ -247,7 +253,7 @@ export default function SkillsSection() {
                       {Math.round(averageLevel)}%
                     </div>
                     <div className="text-xs text-gray-400 text-center px-2">
-                      {category}
+                      {category.name}
                     </div>
                   </div>
                 </motion.div>
@@ -259,5 +265,3 @@ export default function SkillsSection() {
     </section>
   )
 }
-
-import { cn } from '@/lib/utils'

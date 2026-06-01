@@ -57,7 +57,7 @@ export default function Navigation() {
             ? "bg-black/90 backdrop-blur-lg border-b border-white/10" 
             : "bg-transparent"
         )}
-        initial={{ y: -100 }}
+        initial={false}
         animate={{ y: 0 }}
         transition={{ duration: 0.5 }}
       >
@@ -68,7 +68,7 @@ export default function Navigation() {
               className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent"
               whileHover={{ scale: 1.05 }}
             >
-              AR
+              NK
             </motion.div>
 
             {/* Desktop Menu */}

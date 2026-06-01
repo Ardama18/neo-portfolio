@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://alexchen.dev/sitemap.xml
+Sitemap: https://ardama18.github.io/neo-portfolio/sitemap.xml
 
 # Crawl-delay for polite crawlers
 Crawl-delay: 1
@@ -13,6 +13,6 @@ Crawl-delay: 1
 
 # Allow important assets
 Allow: /favicon.ico
-Allow: /manifest.json
+Allow: /neo-portfolio/manifest.json
 Allow: /*.css
 Allow: /*.js
